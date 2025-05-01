@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://use.typekit.net/wxh5ury.css');
+@import url('https://use.typekit.net/qgr5ebd.css');
+
+html {
+  color-scheme: normal !important;
+}
+
+body {
+  background: none !important;
+  margin: 0;
+  font-family: 'Oswald';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  user-select: none;
+  overflow: hidden !important;
+}
+
+p {
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+}
+
+code {
+  font-family: 'Exo 2';
+}
+
+@keyframes progress-bar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  height: 0;
+}
+
+.toast-inform {
+  background-color: #2980b9;
+}
+
+.toast-success {
+  background-color: #27ae60;
+}
+
+.toast-error {
+  background-color: #c0392b;
+}
