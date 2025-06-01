@@ -19,7 +19,7 @@ const useStyles = createStyles((theme) => ({
     top: '18%',
     right: '15%',
     width: 330,
-    height: 530,
+    height: '60vh',
     padding: '10px 5px',
     background: 'rgba(6, 21, 43, 0.5)',
     boxShadow: 'inset 0px 0px 50px 0px rgba(3, 13, 25, 0.2)',
@@ -37,15 +37,16 @@ const useStyles = createStyles((theme) => ({
   },
   titleText: {
     color: '#ffffff',
-    fontSize: 23,
+    fontSize: 18,
     textTransform: 'uppercase',
     padding: '2px 10px',
     textShadow: '0px 0px 10px  #000000',
   },
   buttonsContainer: {
-    height: 470,
+    height: 'calc(100% - 50px)',
     padding: '4px 10px 10px 10px',
     overflowY: 'scroll',
+    // border: '1px solid rgba(255,255,255, 0.5)',
   },
   buttonsFlexWrapper: {
     gap: 4,
@@ -115,7 +116,7 @@ const ContextMenu: React.FC = () => {
                 <ReactMarkdown components={MarkdownComponents}>{contextMenu.title}</ReactMarkdown>
               </Text>
             </Box>
-            <HeaderButton icon="xmark" canClose={contextMenu.canClose} iconSize={18} handleClick={closeContext} />
+            <HeaderButton icon="xmark" canClose={contextMenu.canClose} iconSize={16} handleClick={closeContext} />
           </Flex>
           <Box className={classes.buttonsContainer}>
             <Stack className={classes.buttonsFlexWrapper}>

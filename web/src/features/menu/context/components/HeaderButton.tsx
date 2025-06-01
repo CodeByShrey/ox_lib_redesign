@@ -13,7 +13,7 @@ const useStyles = createStyles((theme, params: { canClose?: boolean }) => ({
   button: {
     textAlign: 'center',
     justifyContent: 'center',
-    padding: '5px 5px',
+    padding: '3px 3px',
     marginRight: '-10px',
     background: 'rgba(0, 0, 0, 0.5)',
     boxShadow: 'inset 0px 0px 30px 0px #ea0e0ec8',
@@ -24,7 +24,7 @@ const useStyles = createStyles((theme, params: { canClose?: boolean }) => ({
   },
   icon: {
     color: 'white',
-    fontSize: 22,
+    fontSize: 20,
   },
   root: {
     border: 'none',

@@ -69,7 +69,7 @@ const useStyles = createStyles((theme, params: { disabled?: boolean; readOnly?: 
   },
   buttonStack: {
     gap: 10,
-    // flex: '1',
+    flex: '1',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'flex-start',
@@ -96,6 +96,14 @@ const useStyles = createStyles((theme, params: { disabled?: boolean; readOnly?: 
   },
   customtext: {
     // display: 'flex',
+  },
+  addOnContainer: {
+    width: '100%',
+  },
+  progressContainer: {
+    width: '100% !important',
+    marginTop: 5,
+    marginBottom: 5,
   },
 }));
 
@@ -150,25 +158,28 @@ const ContextButton: React.FC<{
                     </Text> */}
                   </Group>
                 )}
-                <Box className={classes.customtext}>
-                  <Text className={classes.buttonTitleText}>
-                    <ReactMarkdown components={MarkdownComponents}>{button.title || buttonKey}</ReactMarkdown>
-                  </Text>
-                  {button.description && (
-                    <Text className={classes.description}>
-                      <ReactMarkdown components={MarkdownComponents}>{button.description}</ReactMarkdown>
+                <div className={classes.addOnContainer}>                  
+                  <Box className={classes.customtext}>
+                    <Text className={classes.buttonTitleText}>
+                      <ReactMarkdown components={MarkdownComponents}>{button.title || buttonKey}</ReactMarkdown>
                     </Text>
-                  )}
-                </Box>
-                {button.progress !== undefined && (
-                  <Progress
-                    value={button.progress}
-                    size="sm"
-                    striped
-                    color="indigo"
-                    // color={button.colorScheme || 'yellow' || 'dark.3'}
-                  />
+                    {button.description && (
+                      <Text className={classes.description}>
+                        <ReactMarkdown components={MarkdownComponents}>{button.description}</ReactMarkdown>
+                      </Text>
+                    )}
+                  </Box>
+                  {typeof button.progress === 'number' && button.progress !== undefined && (
+                    <div className={classes.progressContainer}>
+                      <Progress
+                        value={button.progress}
+                        size="sm"
+                        color={button.colorScheme ?? '#4886f0'}
+                        className='progress-bar'                        
+                      />
+                    </div>
                 )}
+                </div>
               </Stack>
               {(button.menu || button.arrow) && button.arrow !== false && (
                 <Stack className={classes.buttonArrowContainer}>
@@ -195,7 +206,6 @@ const ContextButton: React.FC<{
                     <Progress
                       value={metadata.progress}
                       size="sm"
-                      striped
                       color={metadata.colorScheme || 'white' || 'dark.3'}
                     />
                   )}

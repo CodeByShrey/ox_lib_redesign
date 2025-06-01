@@ -6,7 +6,7 @@ export const debugContext = () => {
     {
       action: 'showContext',
       data: {
-        title: 'Vehicle garage',
+        title: 'Vehicle garage ',
         options: [
           { title: 'Empty button' },
           {
@@ -37,29 +37,28 @@ export const debugContext = () => {
               },
             ],
           },
-          // {
-          //   title: 'Example button',
-          //   description: 'Example button description',
-          //   icon: 'inbox',
-          //   image: 'https://i.imgur.com/YAe7k17.jpeg',
-          //   metadata: [{ label: 'Value 1', value: 300 }],
-          //   disabled: true,
-          // },
-          // {
-          //   title: 'Oil Level',
-          //   description: 'Vehicle oil level',
-          //   progress: 30,
-          //   icon: 'oil-can',
-          //   metadata: [{ label: 'Remaining Oil', value: '30%' }],
-          //   arrow: true,
-          // },
-          // {
-          //   title: 'Durability',
-          //   progress: 80,
-          //   icon: 'car-side',
-          //   metadata: [{ label: 'Durability', value: '80%' }],
-          //   colorScheme: 'blue',
-          // },
+          {
+            title: 'Example button',
+            description: 'Example button description',
+            icon: 'inbox',
+            image: 'https://i.imgur.com/YAe7k17.jpeg',
+            metadata: [{ label: 'Value 1', value: 300 }],
+            disabled: true,
+          },
+          {
+            title: 'Oil Level',
+            description: 'Vehicle oil level',
+            progress: 30,
+            icon: 'oil-can',
+            metadata: [{ label: 'Remaining Oil', value: '30%' }],
+            arrow: true,
+          },
+          {
+            title: 'Durability',
+            progress: 80,
+            icon: 'car-side',
+            metadata: [{ label: 'Durability', value: '80%' }],
+          },
           {
             title: 'Menu button',
             icon: 'bars',
@@ -67,6 +66,30 @@ export const debugContext = () => {
             arrow: false,
             description: 'Takes you to another menu',
             metadata: ['It also has metadata support'],
+          },
+          {
+            title: 'Event button',
+            description: 'Open a menu and send event data',
+            icon: 'check',
+            arrow: true,
+            event: 'some_event',
+            args: { value1: 300, value2: 'Other value' },
+          },
+          {
+            title: 'Event button',
+            description: 'Open a menu and send event data',
+            icon: 'check',
+            arrow: true,
+            event: 'some_event',
+            args: { value1: 300, value2: 'Other value' },
+          },
+          {
+            title: 'Event button',
+            description: 'Open a menu and send event data',
+            icon: 'check',
+            arrow: true,
+            event: 'some_event',
+            args: { value1: 300, value2: 'Other value' },
           },
           {
             title: 'Event button',
